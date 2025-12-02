@@ -1,0 +1,194 @@
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  background: #fff;
+  border-bottom: 2px solid #ff6a00;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  width: 40px;
+  border-radius: 6px;
+}
+.logo a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #ff6a00;
+  font-weight: 700;
+}
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.nav-menu a:hover {
+  color: #ff6a00;
+}
+
+/* ====== CHECKOUT ====== */
+.checkout-container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.checkout-section {
+  margin-bottom: 25px;
+}
+.checkout-section h2 {
+  font-size: 18px;
+  color: #ff6a00;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.address-box {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+}
+.address-box .ubah-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #ff6a00;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Produk */
+.product-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+.product-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+.product-info h3 {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+.product-price {
+  margin-left: auto;
+  font-weight: 600;
+}
+
+/* Voucher & Pesan */
+.voucher-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.voucher-row input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.apply-btn {
+  background: #ff6a00;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.apply-btn:hover {
+  background: #e55d00;
+}
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+/* Pengiriman & Pembayaran */
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.payment-methods label {
+  font-weight: 500;
+}
+
+/* Rincian Pembayaran */
+.summary-box {
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 15px;
+}
+.summary-item, .summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.summary-total {
+  font-weight: 700;
+  font-size: 16px;
+}
+.btn-checkout {
+  width: 100%;
+  margin-top: 15px;
+  background: linear-gradient(135deg, #ff6a00, #ff3c00);
+  border: none;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.btn-checkout:hover {
+  background: linear-gradient(135deg, #ff3c00, #ff6a00);
+  transform: translateY(-2px);
+}

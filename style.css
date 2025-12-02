@@ -1,0 +1,781 @@
+/* Reset & dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background: rgb(168, 134, 103);
+  border-bottom: 1px solid #ddd;
+}
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.logo a {
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+}
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+}
+.nav-menu .dropdown {
+  position: relative;
+}
+.nav-menu .dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  top: 100%;
+  left: 0;
+  border: 1px solid #ddd;
+  list-style: none;
+}
+.nav-menu .dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 12px;
+}
+.nav-extra {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-extra input[type="text"] {
+  padding: 5px;
+}
+.btn-cart {
+  text-decoration: none;
+  background: #e67e22;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+/* Hero / Banner */
+.hero {
+  background: url('images/banner.jpg') center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.btn-primary {
+  background: #e08f14;
+  color: #fff;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* ====================== Tentang Kami Section ====================== */
+.about-section {
+  padding: 80px 0;
+  background: #fdfdfd;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+  flex: 1 1 50%;
+}
+
+.about-content h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.about-content p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.btn-learn {
+  display: inline-block;
+  background-color: #ff6f61;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-learn:hover {
+  background-color: #ff8f7a;
+  transform: scale(1.05);
+}
+
+/* ====================== Workshop Section ====================== */
+.workshop-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #fff5f6, #ffe9e3);
+}
+
+.workshop-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.workshop-text {
+  flex: 1 1 50%;
+}
+
+.workshop-text h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.workshop-text p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.workshop-points {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.workshop-points li {
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 16px;
+}
+
+.workshop-image {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.workshop-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.workshop-image img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Produk grid */
+.section-products {
+  padding: 60px 0;
+}
+.section-products h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.product-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform .2s;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-img img {
+  width: 100%;
+  display: block;
+}
+.product-info {
+  padding: 15px;
+}
+.product-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.product-info .price {
+  font-size: 16px;
+  color: #e67e22;
+}
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 10px;
+}
+.tag-sale {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  padding: 5px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+/* Newsletter */
+.newsletter {
+  background: #f2f2f2;
+  padding: 40px 0;
+  text-align: center;
+}
+.newsletter h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.newsletter input[type="email"] {
+  padding: 10px;
+  width: 300px;
+  max-width: 80%;
+  border: 1px solid #ccc;
+}
+.newsletter button {
+  padding: 10px 20px;
+  background: #34476b;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 40px 0;
+}
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+.footer-col h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+.footer-col ul {
+  list-style: none;
+}
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+.footer-col ul li a {
+  color: #ddd;
+  text-decoration: none;
+}
+.footer-col p {
+  margin-bottom: 10px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  background: #3ab2bb;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  max-width: 40%;
+}
+
+.hero-slider {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hero-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-slider img.active {
+  opacity: 1;
+}
+
+
+/* Aturan dasar untuk membagi hero section menjadi dua kolom */
+.hero {
+    display: flex; /* Mengatur layout menjadi fleksibel */
+    align-items: center;
+    background-color: #4f7a5a; /* Warna hijau yang terlihat di screenshot */
+    padding: 60px 5%; /* Atur padding atas/bawah dan samping */
+}
+
+/* Kiri: Konten Teks */
+.hero-content {
+    flex-basis: 50%; /* Ambil 50% ruang */
+    color: white; 
+}
+
+/* Kanan: Container Gambar */
+.hero-slider {
+    flex-basis: 40%; /* Ambil 40% ruang untuk gambar */
+    position: relative;
+    height: 350px; /* Pertahankan tinggi container */
+    max-width: 500px;
+    overflow: hidden; 
+    border-radius: 10px;
+    /* Ubah atau Nonaktifkan box-shadow sementara jika masih menutupi gambar */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+}
+
+/* **ATURAN KRITIS UNTUK GAMBAR** */
+.hero-slider img {
+    /* Hanya gambar pertama yang akan terlihat */
+    width: 100%; 
+    height: 100%;
+    /* Memastikan gambar mengisi area tanpa terpotong (contain) 
+       atau memenuhi area (cover) */
+    object-fit: contain; 
+}
+
+/* Aturan untuk container hero-slider (sudah ada) */
+.hero-slider {
+    /* ... properti yang sudah Anda miliki ... */
+    position: relative; 
+}
+
+/* **ATURAN KRITIS UNTUK GAMBAR** */
+.hero-slider img {
+    position: absolute; /* Semua gambar ditumpuk di satu tempat */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Sembunyikan semua gambar secara default */
+    transition: opacity 0.5s ease-in-out; /* Tambahkan transisi halus */
+    object-fit: contain;
+}
+
+/* Kelas yang akan ditambahkan/dihapus oleh JavaScript */
+.hero-slider img.active {
+    opacity: 1; /* Tampilkan gambar yang sedang aktif */
+}
+
+/* Menargetkan gambar logo */
+.logo img {
+  width: 40px;  /* Sesuaikan lebar gambar sesuai keinginan */
+  height: 40px; /* Sesuaikan tinggi gambar sesuai keinginan */
+  margin-right: 10px; /* Jarak antara gambar logo dan teks "teguk.in" */
+}
+
+/* Menargetkan teks "teguk.in" */
+.logo a {
+  font-size: 30px; /* Membuat teks "teguk.in" lebih besar */
+  color: #333;
+  text-decoration: none;
+}
+
+/* Penting: Pastikan gambar dan teks sejajar */
+/* Perlu menargetkan div .logo */
+.logo {
+  display: flex;
+  align-items: center; /* Menyejajarkan gambar dan teks di tengah vertikal */
+}
+
+
+/* --- TATA LETAK PRODUK UTAMA --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tagline {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Mengatur grid untuk Product Card */
+.product-grid {
+    display: grid;
+    /* Membuat 3 kolom pada layar besar */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; /* Jarak antar card */
+    padding: 20px 0;
+}
+
+/* --- DESAIN CARD PRODUK --- */
+.product-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden; /* Penting untuk gambar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px; /* Tinggi gambar tetap */
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa terdistorsi */
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.product-card .description {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.product-card .price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #da5d00; /* Warna oranye/kuning yang mencolok */
+    margin-bottom: 15px;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #f7a838; /* Warna tombol keranjang */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #da5d00;
+}
+
+/* Badge (Best Seller/New) */
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
+}
+
+.best-seller {
+    background-color: #28a745; /* Hijau */
+}
+
+.new-item {
+    background-color: #007bff; /* Biru */
+}
+
+
+/* --- Bagian Call to Action (CTA) Khusus Mug --- */
+.custom-cta {
+    text-align: center;
+    padding: 40px;
+    margin-top: 40px;
+    background-color: #fcf8e3; /* Warna latar belakang lembut */
+    border: 1px solid #faebcc;
+    border-radius: 8px;
+}
+
+.custom-cta h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.custom-cta p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #da5d00; /* Warna yang kontras */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #a04400;
+}
+
+
+
+ /* ========== WELCOME SECTION ========== */
+section.welcome {
+  background: linear-gradient(135deg, #7689a1, #fff3f7);
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 15px;
+  margin: 30px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+section.welcome h2 {
+  color: #fcb75e !important;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+section.welcome p {
+  color: #444 !important;
+  font-size: 18px;
+}
+
+
+
+/* Hilangkan garis bawah dan outline pada link produk */
+.product-link {
+  text-decoration: none; /* Hilangkan underline */
+  color: inherit;        /* Gunakan warna teks dari parent */
+}
+
+.product-link:focus,
+.product-link:active,
+.product-link:visited {
+  outline: none;         /* Hilangkan garis fokus biru */
+  color: inherit;        /* Pastikan warna tetap sama */
+}
+
+/* Opsional: tambahkan efek hover biar elegan */
+.product-link:hover .product-info {
+  transform: scale(1.02);
+  transition: 0.2s ease;
+}
+
+/* Sedikit gaya agar tetap klik-able dan rapi */
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Tombol Masukkan Keranjang (Gaya Modern Shopee) */
+.btn-cart-add {
+  background: linear-gradient(135deg, #ff6a00, #ff3c00);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(255, 90, 0, 0.25);
+}
+
+.btn-cart-add:hover {
+  background: linear-gradient(135deg, #ff3c00, #ff6a00);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(255, 90, 0, 0.4);
+}
+
+.btn-cart-add:active {
+  transform: scale(0.97);
+}
+
+.btn-cart-add i {
+  font-size: 18px;
+}
+
+/* Game Voucher Section */
+.game-voucher {
+  background: linear-gradient(120deg, #8b6e4d, #af9383);
+  color: rgb(253, 231, 106);
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 20px;
+  margin: 50px auto;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.game-voucher .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-voucher .game-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.game-voucher .game-img {
+  flex: 1;
+  min-width: 250px;
+}
+
+.game-voucher .game-img img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.game-voucher h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.game-voucher p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn-play {
+  background-color: white;
+  color: #f3dd16;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-play:hover {
+  background-color: #fff5f8;
+  transform: scale(1.05);
+}
+
+
+.btn-profile {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  list-style: none;
+  right: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  color: #333;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background: #f5f5f5;
+}
